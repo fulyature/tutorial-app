@@ -1,11 +1,11 @@
-import AddTutorial from "./components/AddTutorial";
-import TutorialList from "./components/TutorialList";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <AddTutorial />
-      <TutorialList />
+      <>
+        <Home />
+      </>
     </div>
   );
 }

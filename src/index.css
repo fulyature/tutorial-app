@@ -45,7 +45,10 @@ input {
   background-color: #85586f;
   color: #f8ede3;
 }
-.edit,
+
 .delete {
-  color: #85586f;
+  color: #8c3333;
+}
+.edit {
+  color: #ffb07f;
 }

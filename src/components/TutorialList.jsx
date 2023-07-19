@@ -28,6 +28,7 @@ const TutorialList = () => {
         </thead>
       </table>
       <tbody>
+        {/* aşagıda maplenen tutorials yukarda yazılan mockdate dan gelmektedır */}
         {tutorials?.map((item) => {
           const { id, title, description } = item;
           return (
@@ -35,7 +36,7 @@ const TutorialList = () => {
               <th>{id}</th>
               <td>{title}</td>
               <td>{description}</td>
-              <td className="text-center text-nowrap">
+              <td className="">
                 <FaEdit size={30} type="button" className="edit" />
                 <AiFillDelete size={30} type="button" className="delete" />
               </td>
