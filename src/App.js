@@ -1,9 +1,11 @@
+import AddTutorial from "./components/AddTutorial";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello React</h1>
+      <AddTutorial />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
