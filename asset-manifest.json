@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/tutorial-app/static/js/main.eea67593.js",
+    "index.html": "/tutorial-app/index.html",
+    "main.eea67593.js.map": "/tutorial-app/static/js/main.eea67593.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.eea67593.js"
+  ]
+}
