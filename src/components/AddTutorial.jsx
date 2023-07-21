@@ -4,7 +4,8 @@ const AddTutorial = ({ addTutorial }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     addTutorial(title, description);
   };
 

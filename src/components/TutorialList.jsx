@@ -1,7 +1,18 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
+import axios from "axios";
 
-const TutorialList = ({ tutorials }) => {
+const TutorialList = ({ tutorials, getTutorials }) => {
+  const handleDelete = async (id) => {
+    const BASE_URL = "https://tutorial-api.fullstack.clarusway.com/tutorials/";
+
+    try {
+      await axios.delete(`${BASE_URL}${id}/`);
+    } catch (error) {
+      console.log(error);
+    }
+    getTutorials();
+  };
   return (
     <table>
       <thead>
@@ -13,7 +24,6 @@ const TutorialList = ({ tutorials }) => {
         </tr>
       </thead>
       <tbody>
-        {/* aşagıda maplenen tutorials yukarda yazılan mockdate dan gelmektedır */}
         {tutorials?.map((item) => {
           const { id, title, description } = item;
           return (
@@ -23,7 +33,12 @@ const TutorialList = ({ tutorials }) => {
               <td>{description}</td>
               <td className="actions">
                 <FaEdit size={30} type="button" className="edit" />
-                <AiFillDelete size={30} type="button" className="delete" />
+                <AiFillDelete
+                  size={30}
+                  type="button"
+                  className="delete"
+                  onClick={() => handleDelete(id)}
+                />
               </td>
             </tr>
           );
